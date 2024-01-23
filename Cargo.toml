@@ -1,0 +1,27 @@
+[package]
+name = "hk32f0301mxxc-hal"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+bare-metal = "1.0.0"
+cortex-m = "0.7"
+cortex-m-rt = "0.7"
+cast = "0.3"
+embedded-hal = { version = "1.0.0" }
+embedded-hal-nb = "1.0.0"
+hk32f0301mxxc-pac = { version = "0.1.0", path = "../hk32f0301mxxc-pac", features = ["rt"]}
+nb = "1.1.0"
+
+[dev-dependencies]
+panic-halt = "0.2"
+
+[features]
+device-selected = []
+
+[[example]]
+name = "blinky"
+
+[[example]]
+name = "serial"
